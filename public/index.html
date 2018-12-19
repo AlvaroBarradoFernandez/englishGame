@@ -1,0 +1,117 @@
+<html lang="en" dir="ltr">
+
+<head>
+  <title>The alphabet game</title>
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyC0A42G03CTFLlJsJ4104QidaM-xKZkse4",
+      authDomain: "english-f1533.firebaseapp.com",
+      databaseURL: "https://english-f1533.firebaseio.com",
+      projectId: "english-f1533",
+      storageBucket: "english-f1533.appspot.com",
+      messagingSenderId: "104612617332"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script type="text/javascript">
+    function clear() {
+      firebase.auth().signOut().then(function() {}).catch(function(error) {
+        // An error happened.
+      });
+    }
+
+    function button2() {
+      document.location.href = "register.html"
+    }
+
+    function buttonLog() {
+      var email = document.getElementById("name").value
+      var pass = document.getElementById("pass").value
+      firebase.auth().signInWithEmailAndPassword(email, pass).catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+
+      });
+    }
+
+    function observer() {
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          console.log("Exits")
+          log();
+          var email = user.email;
+          var pass = user.password;
+        } else {
+          console.log("Doesn't exits");
+        }
+      });
+    }
+    observer();
+
+    function log() {
+      document.location.href = "englishgame.html";
+    }
+  </script>
+
+
+
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body class="back" onload="clear()">
+  <center>
+    <h1>
+      <span>T</span>
+      <span>H</span>
+      <span>E</span>
+      <br>
+      <span>A</span>
+      <span>L</span>
+      <span>P</span>
+      <span>H</span>
+      <span>A</span>
+      <span>B</span>
+      <span>E</span>
+      <span>T</span>
+      <br>
+      <span>G</span>
+      <span>A</span>
+      <span>M</span>
+      <span>E</span>
+    </h1>
+  </center>
+  <title></title>
+
+
+
+  <section>
+    <center class="center">
+      <section class="sectionFields">
+        <br><br><br><br>
+        <div style="width: 200px;text-align: center;display:inline-block;">
+          <h3 style="color:white;margin-top:5%;text-align:center;display:inline-block;font-size:30px;">Email</h3>
+          <input type="text" name="" value="" class="name" id="name">
+        </div><br><br>
+        <div style="width: 200px;text-align: center;display:inline-block;">
+          <h3 style="color:white;text-align:center;display:inline-block;font-size:30px;">Password</h3>
+          <input type="password" name="" value="" class="pass" id="pass">
+        </div>
+        <table>
+        </table>
+      </section>
+      <br>
+      <br>
+      <br>
+      <br>
+      <button type="button" name="button" class="buttonLogin" onclick="buttonLog()"><b>LOGIN</b></button>
+      <button type="button" name="button" class="buttonLogin" onclick="button2()"><b>REGISTER</b></button>
+    </center>
+  </section>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="englishgame.css">
+  <meta charset="utf-8">
+  <title>The alphabet game</title>
+
+  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+  <script>
+    var config = {
+        apiKey: "AIzaSyC0A42G03CTFLlJsJ4104QidaM-xKZkse4",
+        authDomain: "english-f1533.firebaseapp.com",
+        databaseURL: "https://english-f1533.firebaseio.com",
+        projectId: "english-f1533",
+        storageBucket: "english-f1533.appspot.com",
+        messagingSenderId: "104612617332"
+      };
+      firebase.initializeApp(config);
+    </script>
+  <script src="englishgame.js">
+  </script>
+</head>
+
+<body>
+  <p></p>
+  <div class="circulo">
+    <span class="circuloA" style="text-align:center;">
+      <p class="letras">A</p>
+    </span>
+    <span class="circuloB" style="text-align:center;">
+      <p class="letras">B</p>
+    </span>
+    <span class="circuloC" style="text-align:center;">
+      <p class="letras">C</p>
+    </span>
+    <span class="circuloD" style="text-align:center;">
+      <p class="letras">D</p>
+    </span>
+    <span class="circuloE" style="text-align:center;">
+      <p class="letras">E</p>
+    </span>
+    <span class="circuloF" style="text-align:center;">
+      <p class="letras">F</p>
+    </span>
+    <span class="circuloG" style="text-align:center;">
+      <p class="letras">G</p>
+    </span>
+    <span class="circuloH" style="text-align:center;">
+      <p class="letras">H</p>
+    </span>
+    <span class="circuloI" style="text-align:center;">
+      <p class="letras">I</p>
+    </span>
+    <span class="circuloJ" style="text-align:center;">
+      <p class="letras">J</p>
+    </span>
+    <span class="circuloK" style="text-align:center;">
+      <p class="letras">K</p>
+    </span>
+    <span class="circuloL" style="text-align:center;">
+      <p class="letras">L</p>
+    </span>
+    <span class="circuloM" style="text-align:center;">
+      <p class="letras">M</p>
+    </span>
+    <span class="circuloN" style="text-align:center;">
+      <p class="letras">N</p>
+    </span>
+    <span class="circuloO" style="text-align:center;">
+      <p class="letras">O</p>
+    </span>
+    <span class="circuloP" style="text-align:center;">
+      <p class="letras">P</p>
+    </span>
+    <span class="circuloQ" style="text-align:center;">
+      <p class="letras">Q</p>
+    </span>
+    <span class="circuloR" style="text-align:center;">
+      <p class="letras">R</p>
+    </span>
+    <span class="circuloS" style="text-align:center;">
+      <p class="letras">S</p>
+    </span>
+    <span class="circuloT" style="text-align:center;">
+      <p class="letras">T</p>
+    </span>
+    <span class="circuloU" style="text-align:center;">
+      <p class="letras">U</p>
+    </span>
+    <span class="circuloV" style="text-align:center;">
+      <p class="letras">V</p>
+    </span>
+    <span class="circuloW2" style="text-align:center;">
+      <p class="letras">W</p>
+    </span>
+    <span class="circuloW" style="text-align:center;">
+      <p class="letras">X</p>
+    </span>
+    <span class="circuloX" style="text-align:center;">
+      <p class="letras">Y</p>
+    </span>
+    <span class="circuloY" style="text-align:center;">
+      <p class="letras">Z</p>
+    </span>
+  </div>
+  <div class="left">
+
+    <p id="ar" class="alineado">Starts with letter A: Fourth Month of the Year</p>
+    <p id="br" class="alineado">Starts with letter B: Color of the sky</p>
+    <p id="cr" class="alineado">Starts with letter C: Pet that says meow</p>
+    <p id="dr" class="alineado">Starts with letter D: What animal was the T-Rex?</p>
+    <p id="er" class="alineado">Starts with letter E: Wild animal that uses its nose to drink</p>
+    <p id="fr" class="alineado">Starts with letter F: Antonym of pass</p>
+    <p id="gr" class="alineado">Starts with letter G: What do you give to someone on his/her birthday?</p>
+    <p id="hr" class="alineado">Starts with letter H: Antonym of sad</p>
+    <p id="ir" class="alineado">Starts with letter I: If you read a lot of books you will be more...</p>
+    <p id="jr" class="alineado">Starts with letter J: You can spread it on your toast</p>
+    <p id="kr" class="alineado">Starts with letter K: You can open doors with it</p>
+    <p id="lr" class="alineado">Starts with letter L: The king of the jungle</p>
+    <p id="mr" class="alineado">Starts with letter M: Hour, " " and second</p>
+
+  </div>
+  <div class="right">
+    <p id="nr" class="alineado">Contains the letter N: If you mix red and yellow, the result is...</p>
+    <p id="or" class="alineado">Contains the letter O: Bird with many colors</p>
+    <p id="pr" class="alineado">Starts with letter P: Their sound is like "oink"</p>
+    <p id="qr" class="alineado">Starts with letter Q: The king's wife</p>
+    <p id="rr" class="alineado">Contanis the letter R: Food for rabbits</p>
+    <p id="sr" class="alineado">Starts with the letter S: The country which has paella, siesta, bullfighting...</p>
+    <p id="tr" class="alineado">Contains the letter T: The liquid that flows in the rivers, seas, lakes...</p>
+    <p id="ur" class="alineado">Starts with letter U: You use this to cover you from the rain</p>
+    <p id="vr" class="alineado">Starts with letter V: When you get sick, you have caught a...</p>
+
+    <p id="w2r" class="alineado">Contains the letter W: Sharks have many teeths in it</p>
+    <p id="wr" class="alineado">Starts with X: Musical instrument</p>
+    <p id="xr" class="alineado">Starts with Y: It has 365 or 366 days</p>
+    <p id="yr" class="alineado">Starts with Z: Animal with black and white vertical stripes</p>
+    <p></p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <audio id="audio" controls>
+    <source type="audio/mp3" src="ding.mp3">
+  </audio>
+  <audio id="audio2" controls>
+    <source type="audio/mp3" src="fail.mp3">
+  </audio>
+  <audio id="audio3" controls>
+    <source type="audio/mp3" src="clapping.mp3">
+  </audio>
+  <button type="button" name="button" class="buttonLogout" onclick="logout()">Logout</button>
+  <h1 id="h1TopTop">Lives <br>
+    <p id="life" style="margin-left: 25%;font-size: 50px;display: inline;">3</p>
+  </h1>
+  <div>
+    <h3 id="h3Top" style="position: absolute; display: block; left: 45%;top:95%;">Your answer here</h3>
+    <input type="text" id="text" autocomplete="off" onkeyup=" if (event.keyCode == 13) check(); if (event.keyCode == 13) enviartexto2();" style="position:absolute;left:45.5%;top:37%;">
+    <h4 id="h4Bottom" style="position: absolute; top: 35%;">In minus please</h4>
+  </div>
+  <h1 id="counterGr" style="display:none;">0</h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</body>
+
+</html>
