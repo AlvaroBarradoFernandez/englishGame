@@ -10,15 +10,15 @@ var minute = date.getMinutes();
 var hour = date.getHours();
 var seconds = date.getSeconds();
 
-function minus(){
+function minus() {
   var date2 = new Date();
   var minute2 = date2.getMinutes();
   var hour2 = date2.getHours();
   var seconds2 = date2.getSeconds();
   var minusHour = hour2 - hour
   var minusMinute = minute2 - minute
-  var minusSeconds = seconds2-seconds
-  alert ("Your time: " + minusHour + "h " + minusMinute + "m " + minusSeconds + "s ")
+  var minusSeconds = seconds2 - seconds
+  alert("Your time: " + minusHour + "h " + minusMinute + "m " + minusSeconds + "s ")
 }
 
 function enviartexto2() {
